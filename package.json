@@ -12,6 +12,10 @@
     "morgan": "^1.7.0",
     "uuid": "^3.1.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stavdavis/blog-api.git"
+  },
   "author": "Stav Davis",
   "keywords": [
     "node",
