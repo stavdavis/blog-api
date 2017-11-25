@@ -6,9 +6,17 @@
   "scripts": {
     "start": "node server.js"
   },
-  "author": "Stav Davis",
-  "license": "MIT",
   "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.12.4",
+    "morgan": "^1.7.0",
     "uuid": "^3.1.0"
-  }
+  },
+  "author": "Stav Davis",
+  "keywords": [
+    "node",
+    "hyperdev",
+    "express"
+  ],
+  "license": "ISC"
 }
