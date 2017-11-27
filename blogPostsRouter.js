@@ -25,7 +25,7 @@ router.delete('/:id', (req, res) => {
 
 //Setting up a POST endpoint:
 router.post('/', jsonParser, (req, res) => {
-  const requiredFields = ['id', 'title', 'content', 'author', 'publishDate'];
+  const requiredFields = ['title', 'content', 'author'];
   for (let i=0; i<requiredFields.length; i++) {
     const field = requiredFields[i];
     if(!(field in req.body)) {
@@ -34,7 +34,8 @@ router.post('/', jsonParser, (req, res) => {
       return res.status(400).send(message);
     }
   }
-  const item = BlogPosts.create(req.params.id, req.body.name, req.body.content, req.body.author, req.body.publishDate);
+  const item = BlogPosts.create(
+    req.body.title, req.body.content, req.body.author);
   res.status(201).json(item);
 });
 
